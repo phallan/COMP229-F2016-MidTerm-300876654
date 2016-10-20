@@ -140,6 +140,8 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Todo.cs" />
+    <Compile Include="Models\TodoContext.cs" />
     <Compile Include="TodoDetails.aspx.cs">
       <DependentUpon>TodoDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -165,7 +167,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Code\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
