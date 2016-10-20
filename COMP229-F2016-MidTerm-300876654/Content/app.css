@@ -89,3 +89,11 @@ body {
     border: 1px solid #dddddd;
     cursor: pointer;
 }
+.nav{
+    background-color:#4B0082 ;/*purple default nav*/   
+    color:#FDF8FF;/*text for nav*/
+}
+a:hover{
+    background-color:#e1d3e8;
+        color:#401555;
+}

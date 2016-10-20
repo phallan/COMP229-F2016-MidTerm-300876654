@@ -6,6 +6,7 @@
             <div class="jumbotron" id="content" runat="server">
                 <div class="text-center">
                     <h2>Welcome to ASP.NET Todo List</h2>
+                    <img src="Assests/image/download.jpg" />
                 </div>
             </div>
         </div>

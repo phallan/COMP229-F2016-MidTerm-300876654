@@ -19,13 +19,18 @@
                         placeholder="Notes" required="true"></asp:TextBox>
                 </div>
 
-                <div class="form-group">
-                    <label class="control-label" for="TodoCompletedTextBox">Notes</label>
-                    <asp:TextBox runat="server" CssClass="form-control" ID="TodoCompletedTextBox"
-                        placeholder="Notes" required="true"></asp:TextBox>
-                </div>
+            
+              <!--  <div class="form-group"> 
+                    <label class="control-label" for="TodoCompletedCheckbox">Completed</label>
+                    <asp:CheckBox  runat="server" CssClass="form-control" ID="TodoCompletedCheckbox"
+                        required="true"></asp:Checkbox></div>
+      
 
-               
+                  <asp:TemplateField>
+               <ItemTemplate><asp:CheckBox ID="TodoCompleted"  HeaderText="Completed" runat="server"/></ItemTemplate>
+           </asp:TemplateField>-----listpage
+               -->
+         
 
                 <div class="text-right">
                     <asp:Button Text="Cancel" ID="CancelButton" CssClass="btn btn-warning btn-lg" runat="server"

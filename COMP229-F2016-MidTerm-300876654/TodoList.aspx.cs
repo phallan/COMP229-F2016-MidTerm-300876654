@@ -119,5 +119,14 @@ namespace COMP229_F2016_MidTerm_300876654
                 TodoGridView.DataBind();
             }
         }
+
+        protected void PageSizeDropDownList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // set the new Page size
+            TodoGridView.PageSize = Convert.ToInt32(PageSizeDropDownList.SelectedValue);
+
+            // refresh the GridView
+            this.GetTodo();
+        }
     }
 }

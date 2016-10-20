@@ -29,16 +29,17 @@ namespace COMP229_F2016_MidTerm_300876654
             {
                 // populate a student object instance with the StudentID from 
                 // the URL parameter
-               Todo updatedStudent = (from x in db.Todos
+               Todo updatedTodo = (from x in db.Todos
                                           where x.TodoId== TodoId
                                           select x).FirstOrDefault();
 
                 // map the student properties to the form control
-                if (updatedStudent != null)
+                if (updatedTodo != null)
                 {
-                    TodoDescriptionTextBox.Text = updatedStudent.TodoDescription;
-                    TodoNotesTextBox.Text = updatedStudent.TodoNotes;
-                    TodoCompletedTextBox.Text = updatedStudent.Completed.ToString();
+                    TodoDescriptionTextBox.Text = updatedTodo.TodoDescription;
+                    TodoNotesTextBox.Text = updatedTodo.TodoNotes;
+                 //   TodoCompletedCheckbox.Text = updatedTodo.Completed.ToString();
+               
                 }
             }
         }
@@ -72,7 +73,8 @@ namespace COMP229_F2016_MidTerm_300876654
                 // add form data to the new student record
                 newTodo.TodoDescription = TodoDescriptionTextBox.Text;
                 newTodo.TodoNotes = TodoNotesTextBox.Text;
-                newTodo.Completed = Convert.ToBoolean(TodoCompletedTextBox.Text);
+               //  newTodo.Completed = Convert.ToBoolean(TodoCompletedCheckbox);
+          
 
                 // use LINQ to ADO.NET to add / insert new student into the db
 
