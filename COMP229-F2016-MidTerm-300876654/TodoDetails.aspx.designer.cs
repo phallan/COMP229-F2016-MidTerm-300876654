@@ -40,15 +40,6 @@ namespace COMP229_F2016_MidTerm_300876654 {
         protected global::System.Web.UI.WebControls.CheckBox TodoCompletedCheckbox;
         
         /// <summary>
-        /// TodoCompleted control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox TodoCompleted;
-        
-        /// <summary>
         /// CancelButton control.
         /// </summary>
         /// <remarks>

@@ -27,18 +27,17 @@ namespace COMP229_F2016_MidTerm_300876654
             // connect to the EF DB
             using (TodoContext db = new TodoContext())
             {
-                // populate a student object instance with the StudentID from 
-                // the URL parameter
+                // get todolist data from the query string
                Todo updatedTodo = (from x in db.Todos
                                           where x.TodoId== TodoId
                                           select x).FirstOrDefault();
 
-                // map the student properties to the form control
+             //if not emptyfill in the previous data
                 if (updatedTodo != null)
                 {
                     TodoDescriptionTextBox.Text = updatedTodo.TodoDescription;
                     TodoNotesTextBox.Text = updatedTodo.TodoNotes;
-                 //   TodoCompletedCheckbox.Text = updatedTodo.Completed.ToString();
+                   TodoCompletedCheckbox.Text = updatedTodo.Completed.ToString();
                
                 }
             }
@@ -52,41 +51,41 @@ namespace COMP229_F2016_MidTerm_300876654
         {
             using (TodoContext db = new TodoContext())
             {
-                // use the student model to create a new student object and 
+                // create new todo object
                 // save a new record
 
                 Todo newTodo = new Todo();
 
                 int TodoID = 0;
 
-                if (Request.QueryString.Count > 0) // our URL has a STUDENTID in it
+                if (Request.QueryString.Count > 0) // resulting query  has id in it
                 {
                     // get the id from the URL
                     TodoID = Convert.ToInt32(Request.QueryString["TodoId"]);
 
-                    // get the current student from EF db
+                    // get the todo 
                     newTodo = (from x in db.Todos
                                   where x.TodoId == TodoID
                                   select x).FirstOrDefault();
                 }
 
-                // add form data to the new student record
+                // add new todo record
                 newTodo.TodoDescription = TodoDescriptionTextBox.Text;
                 newTodo.TodoNotes = TodoNotesTextBox.Text;
-               //  newTodo.Completed = Convert.ToBoolean(TodoCompletedCheckbox);
+                newTodo.Completed = Convert.ToBoolean(TodoCompletedCheckbox);
           
 
-                // use LINQ to ADO.NET to add / insert new student into the db
+                // using linq to add
 
                 if (TodoID == 0)
                 {
                     db.Todos.Add(newTodo);
                 }
 
-                // save our changes - also updates and inserts
+                // save our change
                 db.SaveChanges();
 
-                // Redirect back to the updated students page
+                // Redirect back to the updated todo page
                 Response.Redirect("TodoList.aspx");
             }
         }

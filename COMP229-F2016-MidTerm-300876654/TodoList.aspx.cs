@@ -22,7 +22,7 @@ namespace COMP229_F2016_MidTerm_300876654
                 Session["SortColumn"] = "TodoId"; // default sort column
                 Session["SortDirection"] = "ASC";
 
-                // Get the student data
+                // Get data
                 this.GetTodo();
 
             }
@@ -110,11 +110,11 @@ namespace COMP229_F2016_MidTerm_300876654
                 string SortString = Session["SortColumn"].ToString() + " " +
                     Session["SortDirection"].ToString();
 
-                // query the Student Table using EF and LINQ
+                // query todo table using EF and LINQ
                 var todos = (from todo in db.Todos
                                 select todo);
 
-                // bind the result to the Students GridView
+                // bind the result to the todo GridView
                 TodoGridView.DataSource = todos.AsQueryable().OrderBy(SortString).ToList();
                 TodoGridView.DataBind();
             }

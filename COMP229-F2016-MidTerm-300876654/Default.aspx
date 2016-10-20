@@ -5,7 +5,7 @@
         <div class="col-md-offset-2 col-md-8">
             <div class="jumbotron" id="content" runat="server">
                 <div class="text-center">
-                    <h2>Welcome to ASP.NET Todo List</h2>
+                    <h2>Welcome to Your Todo List</h2>
                     <img src="Assests/image/download.jpg" />
                 </div>
             </div>

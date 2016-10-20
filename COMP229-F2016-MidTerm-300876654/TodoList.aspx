@@ -31,7 +31,9 @@
             <asp:BoundField DataField="TodoDescription" HeaderText="Description" Visible="true" SortExpression="TodoDescription" />
             <asp:BoundField DataField="TodoNotes" HeaderText="Notes" Visible="true" SortExpression="TodoNotes" />
            
-           
+             <asp:TemplateField HeaderText="Completed">
+               <ItemTemplate><asp:CheckBox ID="TodoCompleted"   runat="server"/></ItemTemplate>
+           </asp:TemplateField>
 
          <asp:HyperLinkField HeaderText="Edit" Text="<i class='fa fa-pencil-square-o fa-lg'></i> Edit"
                             NavigateUrl="TodoDetails.aspx.cs" ControlStyle-CssClass="btn btn-primary btn-sm"

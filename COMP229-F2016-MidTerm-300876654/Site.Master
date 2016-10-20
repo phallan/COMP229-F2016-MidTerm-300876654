@@ -15,7 +15,10 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <!-- Main Navigation -->
+      <!--Name:- Pahul Preet Kaur Hallan
+          300876654
+          comp229- midterm 2016-->
+          <!-- Main Navigation -->
         <nav class="navbar nav" role="navigation">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
